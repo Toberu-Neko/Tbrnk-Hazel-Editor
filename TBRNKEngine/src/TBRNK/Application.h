@@ -12,4 +12,8 @@ namespace TBRNK {
 
 		void Run();
 	};
+
+	// To be defined in CLIENT
+	Application* CreateApplication();
+
 }

@@ -13,9 +13,6 @@ public:
 
 };
 
-int main() {
-
-	Sandbox* sandbox = new Sandbox();
-	sandbox->Run();
-	delete sandbox;
+TBRNK::Application* TBRNK::CreateApplication() {
+	return new Sandbox();
 }

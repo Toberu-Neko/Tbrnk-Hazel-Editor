@@ -24,6 +24,9 @@
     <ClInclude Include="src\TBRNK.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\TBRNK\EntryPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\TBRNK\Application.cpp">
