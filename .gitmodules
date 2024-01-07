@@ -1,0 +1,3 @@
+[submodule "TBRNKEngine/vendor/spdlog"]
+	path = TBRNKEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog
