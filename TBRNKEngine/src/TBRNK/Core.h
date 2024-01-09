@@ -10,3 +10,4 @@
 	#error TBRNK only supports Windows!
 #endif // TBRNK_PLATFORM_WINDOWS
 
+#define BIT(x) (1 << x)

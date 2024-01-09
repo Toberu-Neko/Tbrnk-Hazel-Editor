@@ -1,5 +1,8 @@
 #include "Application.h"
 
+#include "TBRNK/Events/ApplicationEvent.h"
+#include "TBRNK/Log.h"
+
 namespace TBRNK {
 
 	Application::Application()
@@ -14,10 +17,9 @@ namespace TBRNK {
 
 	void Application::Run()
 	{
-		while (true)
-		{
-			//update
-			//render
-		}
+		WindowResizeEvent e(1280, 720);
+		TBRNK_TRACE(e);
+
+		while (true);
 	}
 }

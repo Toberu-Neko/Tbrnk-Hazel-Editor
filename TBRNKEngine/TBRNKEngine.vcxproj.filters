@@ -4,6 +4,9 @@
     <Filter Include="TBRNK">
       <UniqueIdentifier>{A6A2140E-12B7-3CBF-DB38-E01E470C39F0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TBRNK\Events">
+      <UniqueIdentifier>{CA177096-B67A-FF3A-5F00-38F14B42CBBD}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\TBRNK.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\TBRNK\EntryPoint.h">
       <Filter>TBRNK</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TBRNK\Events\ApplicationEvent.h">
+      <Filter>TBRNK\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TBRNK\Events\Event.h">
+      <Filter>TBRNK\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TBRNK\Events\KeyEvent.h">
+      <Filter>TBRNK\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TBRNK\Events\MouseEvent.h">
+      <Filter>TBRNK\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\TBRNK\Log.h">
       <Filter>TBRNK</Filter>
