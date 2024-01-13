@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace TBRNK {
 
 	class TBRNK_API WindowResizeEvent : public Event

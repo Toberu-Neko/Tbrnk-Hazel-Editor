@@ -2,9 +2,6 @@
 
 #include "TBRNK/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace TBRNK {
 
 	// Events are currently blocking, meaning when an event occurs it

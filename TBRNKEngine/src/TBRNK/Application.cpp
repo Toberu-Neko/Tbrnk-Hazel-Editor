@@ -1,3 +1,4 @@
+#include "tbrnkpch.h"
 #include "Application.h"
 
 #include "TBRNK/Events/ApplicationEvent.h"

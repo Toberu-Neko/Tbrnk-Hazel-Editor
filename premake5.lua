@@ -24,6 +24,9 @@ project "TBRNKEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "tbrnkpch.h"
+	pchsource "TBRNKEngine/src/tbrnkpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
