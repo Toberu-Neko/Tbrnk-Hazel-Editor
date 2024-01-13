@@ -16,6 +16,12 @@ workspace "TBRNKEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "TBRNKEngine/vendor/GLFW/include"
+
+include "TBRNKEngine/vendor/GLFW"
+
 project "TBRNKEngine"
 	location "TBRNKEngine"
 	kind "SharedLib"
@@ -36,7 +42,14 @@ project "TBRNKEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
