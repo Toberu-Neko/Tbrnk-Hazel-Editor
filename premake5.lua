@@ -70,14 +70,17 @@ project "TBRNKEngine"
 
 	filter "configurations:Debug"
 		defines "TBRNK_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "TBRNK_RELEASE"
+		buildoptions "/MD"
 		symbols "On"
 
 	filter "configurations:Dist"
 		defines "TBRNK_DIST"
+		buildoptions "/MD"
 		symbols "On"
 
 project "Sandbox"
@@ -117,12 +120,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "TBRNK_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 	
 	filter "configurations:Release"
 		defines "TBRNK_RELEASE"
+		buildoptions "/MD"
 		symbols "On"
 
 	filter "configurations:Dist"
 		defines "TBRNK_DIST"
+		buildoptions "/MD"
 		symbols "On"

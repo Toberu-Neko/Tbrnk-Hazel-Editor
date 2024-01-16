@@ -40,6 +40,12 @@
     <ClInclude Include="src\TBRNK\Events\MouseEvent.h">
       <Filter>TBRNK\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\TBRNK\Layer.h">
+      <Filter>TBRNK</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TBRNK\LayerStack.h">
+      <Filter>TBRNK</Filter>
+    </ClInclude>
     <ClInclude Include="src\TBRNK\Log.h">
       <Filter>TBRNK</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\TBRNK\Application.cpp">
+      <Filter>TBRNK</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TBRNK\Layer.cpp">
+      <Filter>TBRNK</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TBRNK\LayerStack.cpp">
       <Filter>TBRNK</Filter>
     </ClCompile>
     <ClCompile Include="src\TBRNK\Log.cpp">
