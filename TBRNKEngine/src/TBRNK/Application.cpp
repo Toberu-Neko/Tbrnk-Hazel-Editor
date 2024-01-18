@@ -3,6 +3,8 @@
 
 #include "TBRNK/Log.h"
 
+#include <glad/glad.h>
+
 namespace TBRNK {
 
 	#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -45,6 +47,9 @@ namespace TBRNK {
 	{
 		while (m_Running)
 		{
+			glClearColor(0.5, 0.5, 0.5, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
 

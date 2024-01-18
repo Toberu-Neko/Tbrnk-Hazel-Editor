@@ -19,8 +19,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "TBRNKEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "TBRNKEngine/vendor/Glad/include"
 
 include "TBRNKEngine/vendor/GLFW"
+include "TBRNKEngine/vendor/Glad"
 
 project "TBRNKEngine"
 	location "TBRNKEngine"
@@ -43,12 +45,14 @@ project "TBRNKEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -60,7 +64,8 @@ project "TBRNKEngine"
 		defines
 		{
 			"TBRNK_PLATFORM_WINDOWS",
-			"TBRNK_BUILD_DLL"
+			"TBRNK_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
