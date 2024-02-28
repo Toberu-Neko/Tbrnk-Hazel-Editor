@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>tbrnkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TBRNK_PLATFORM_WINDOWS;TBRNK_BUILD_DLL;GLFW_INCLUDE_NONE;TBRNK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -106,7 +106,7 @@
       <PrecompiledHeaderFile>tbrnkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TBRNK_PLATFORM_WINDOWS;TBRNK_BUILD_DLL;GLFW_INCLUDE_NONE;TBRNK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -132,7 +132,7 @@
       <PrecompiledHeaderFile>tbrnkpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>TBRNK_PLATFORM_WINDOWS;TBRNK_BUILD_DLL;GLFW_INCLUDE_NONE;TBRNK_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -153,6 +153,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLLoader.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\TBRNK.h" />
     <ClInclude Include="src\TBRNK\Application.h" />
@@ -162,6 +164,7 @@
     <ClInclude Include="src\TBRNK\Events\Event.h" />
     <ClInclude Include="src\TBRNK\Events\KeyEvent.h" />
     <ClInclude Include="src\TBRNK\Events\MouseEvent.h" />
+    <ClInclude Include="src\TBRNK\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\TBRNK\Layer.h" />
     <ClInclude Include="src\TBRNK\LayerStack.h" />
     <ClInclude Include="src\TBRNK\Log.h" />
@@ -169,8 +172,10 @@
     <ClInclude Include="src\tbrnkpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\TBRNK\Application.cpp" />
+    <ClCompile Include="src\TBRNK\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\TBRNK\Layer.cpp" />
     <ClCompile Include="src\TBRNK\LayerStack.cpp" />
     <ClCompile Include="src\TBRNK\Log.cpp" />

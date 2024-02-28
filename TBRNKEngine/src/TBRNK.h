@@ -7,6 +7,8 @@
 #include "TBRNK/Layer.h"
 #include "TBRNK/Log.h"
 
+#include "TBRNK/ImGui/ImGuiLayer.h"
+
 // ---Entry Point---------------------
 #include "TBRNK/EntryPoint.h"
 // -----------------------------------
